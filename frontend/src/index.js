@@ -7,9 +7,11 @@ import { store } from "./store";
 import App from "./components/App";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components"
+import GlobalStyle from './styles/GlobalStyle'
 
 ReactDOM.render(
   <ThemeProvider>
+    <GlobalStyle />
     <Provider store={store}>
       <BrowserRouter basename="/">
         <App />
