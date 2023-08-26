@@ -49,7 +49,7 @@ const LoggedInView = (props) => {
   );
 };
 
-function Header (props) {
+function Header (currentUser) {
     return (
       <nav
         className="navbar navbar-expand-md navbar-dark"
@@ -60,9 +60,9 @@ function Header (props) {
         </Link>
 
         {this.props.currentUser ? (
-          <LoggedInView currentUser={props.currentUser} />
+          <LoggedInView currentUser={currentUser} />
         ) : (
-          <LoggedOutView currentUser={props.currentUser} />
+          <LoggedOutView currentUser={currentUser} />
         )}
       </nav>
     );
